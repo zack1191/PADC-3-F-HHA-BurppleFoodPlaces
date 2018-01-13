@@ -9,13 +9,23 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hha.heinhtetaung.burpplefoodplaces.R;
+import com.hha.heinhtetaung.burpplefoodplaces.activities.data.models.vo.PromotionVO;
 import com.hha.heinhtetaung.burpplefoodplaces.activities.viewholders.ItemsFoodPromotionsViewHolder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by E5 on 1/4/2018.
  */
 
 public class FoodPromotionsAdapter extends RecyclerView.Adapter<ItemsFoodPromotionsViewHolder> {
+
+    private List<PromotionVO> mPromotionList;
+
+    public FoodPromotionsAdapter() {
+        mPromotionList = new ArrayList<>();
+    }
 
     @Override
     public ItemsFoodPromotionsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -28,11 +38,18 @@ public class FoodPromotionsAdapter extends RecyclerView.Adapter<ItemsFoodPromoti
 
     @Override
     public void onBindViewHolder(ItemsFoodPromotionsViewHolder holder, int position) {
-
+        holder.setPromotion(mPromotionList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 5;
+        return mPromotionList.size();
     }
+
+    public void setPromotion(List<PromotionVO> promotionList) {
+        mPromotionList = promotionList;
+        notifyDataSetChanged();
+    }
+
+
 }

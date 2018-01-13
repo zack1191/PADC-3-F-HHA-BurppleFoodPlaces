@@ -7,13 +7,24 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hha.heinhtetaung.burpplefoodplaces.R;
+import com.hha.heinhtetaung.burpplefoodplaces.activities.data.models.vo.FeaturesVO;
+import com.hha.heinhtetaung.burpplefoodplaces.activities.data.models.vo.GuidesVO;
 import com.hha.heinhtetaung.burpplefoodplaces.activities.viewholders.FoodBurppleGuidesViewHolder;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by E5 on 1/5/2018.
  */
 
 public class FoodBurppleGuidesAdapter extends RecyclerView.Adapter<FoodBurppleGuidesViewHolder> {
+
+    private List<GuidesVO> mGuideList;
+
+    public FoodBurppleGuidesAdapter() {
+        mGuideList = new ArrayList<>();
+    }
 
     @Override
     public FoodBurppleGuidesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -26,11 +37,18 @@ public class FoodBurppleGuidesAdapter extends RecyclerView.Adapter<FoodBurppleGu
 
     @Override
     public void onBindViewHolder(FoodBurppleGuidesViewHolder holder, int position) {
-
+        holder.setGuide(mGuideList.get(position));
     }
 
     @Override
     public int getItemCount() {
-        return 6;
+        return mGuideList.size();
     }
+
+    public void setGuide(List<GuidesVO> guideList) {
+        mGuideList = guideList;
+        notifyDataSetChanged();
+    }
+
+
 }

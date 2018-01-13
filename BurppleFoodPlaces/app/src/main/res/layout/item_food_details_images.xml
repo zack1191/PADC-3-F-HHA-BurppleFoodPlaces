@@ -34,7 +34,6 @@
             android:layout_below="@id/tv_feature"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/font_pikikay"
             android:text="DISHES THAT MADE YOU GIVE UP ON"
             android:textColor="#fff"
             android:textSize="20sp"
@@ -46,7 +45,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_text_food_details_images"
             android:layout_centerHorizontal="true"
-            android:fontFamily="@font/font_pikikay"
             android:text="YOUR NEW YEAR'S RESOLUTIONS IN 2017"
             android:textColor="#fff"
             android:textSize="16sp" />
