@@ -1,6 +1,7 @@
 package com.hha.heinhtetaung.burpplefoodplaces.activities.data.models;
 
 import com.hha.heinhtetaung.burpplefoodplaces.activities.network.FeaturedOkHttpDataAgent;
+import com.hha.heinhtetaung.burpplefoodplaces.activities.network.FeaturedRetrofitDataAgent;
 import com.hha.heinhtetaung.burpplefoodplaces.activities.network.FeaturesDataAgent;
 
 /**
@@ -8,19 +9,21 @@ import com.hha.heinhtetaung.burpplefoodplaces.activities.network.FeaturesDataAge
  */
 
 public class FeaturesModel {
-    private static FeaturesModel sobjInstance;
+    private static FeaturesModel sObjInstance;
     private FeaturesDataAgent mFeaturesDataAgent;
 
 
     private FeaturesModel() {
-        mFeaturesDataAgent = FeaturedOkHttpDataAgent.getsObjInstance();
+
+//        mFeaturesDataAgent = FeaturedOkHttpDataAgent.getsObjInstance();
+        mFeaturesDataAgent = FeaturedRetrofitDataAgent.getsObjInstance();
     }
 
     public static FeaturesModel getSobjInstance() {
-        if (sobjInstance == null) {
-            sobjInstance = new FeaturesModel();
+        if (sObjInstance == null) {
+            sObjInstance = new FeaturesModel();
         }
-        return sobjInstance;
+        return sObjInstance;
     }
 
     public void loadFeatured() {

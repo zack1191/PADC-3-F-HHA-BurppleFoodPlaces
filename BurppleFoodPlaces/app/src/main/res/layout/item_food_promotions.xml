@@ -2,15 +2,13 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="8dp"
-    android:layout_marginRight="8dp"
-    android:layout_marginTop="16dp">
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
         android:id="@+id/cv_food_promotion"
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/promotions_item_width"
         android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         app:cardCornerRadius="4dp">
 
         <RelativeLayout
@@ -22,61 +20,73 @@
             <!--android:layout_width="175dp"-->
             <!--android:layout_height="170dp"-->
             <!--android:layout_alignEnd="@id/rl_layout">-->
-
-
-            <ImageView
-                android:id="@+id/iv_food_promotion"
-                android:layout_width="175dp"
-                android:layout_height="170dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:foreground="@android:drawable/screen_background_dark_transparent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_burger_2" />
-
-            <TextView
-                android:id="@+id/tv_burpple"
+            <RelativeLayout
+                android:id="@+id/rl_relative_layout"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="50dp"
-                android:background="#ffc107"
-                android:padding="4dp"
-                android:text="BURPPLE EXCLUSIVE"
-                android:textColor="#fff" />
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tv_1for1"
-                style="@style/text_style"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_burpple"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="15dp"
-                android:text="1-for-1 Shabu"
-                android:textSize="14sp" />
+                <ImageView
+                    android:id="@+id/iv_food_promotion"
+                    android:layout_width="@dimen/promotions_item_width"
+                    android:layout_height="@dimen/promotions_item_height"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:foreground="@android:drawable/screen_background_dark_transparent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_burger_2" />
+            </RelativeLayout>
 
-
-            <View
-                android:id="@+id/v_view"
+            <RelativeLayout
                 android:layout_width="160dp"
-                android:layout_height="1dp"
-                android:layout_alignLeft="@id/tv_1for1"
-                android:layout_below="@id/tv_1for1"
-                android:layout_margin="4dp"
-                android:background="#bdbdbd"></View>
+                android:layout_height="180dp">
 
-            <TextView
-                android:id="@+id/tv_date"
-                style="@style/text_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/v_view"
-                android:layout_marginLeft="8dp"
-                android:text="TILL 31ST JAN'18"
-                android:textSize="12sp" />
-            <!--</RelativeLayout>-->
+                <TextView
+                    android:id="@+id/tv_burpple"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/shape_promotion"
+                    android:padding="4dp"
+                    android:text="BURPPLE EXCLUSIVE"
+                    android:textColor="#fff" />
 
+                <TextView
+                    android:id="@+id/tv_1for1"
+                    style="@style/text_style"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/v_view"
+                    android:layout_alignStart="@id/tv_burpple"
+                    android:layout_marginBottom="8dp"
+                    android:text="1-for-1 Shabu"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+
+                <View
+                    android:id="@+id/v_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_above="@id/tv_date"
+                    android:layout_alignStart="@id/tv_burpple"
+                    android:background="#bdbdbd"></View>
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignStart="@id/tv_burpple"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="4dp"
+                    android:text="TILL 31ST JAN'18"
+                    android:textSize="12sp" />
+                <!--</RelativeLayout>-->
+
+            </RelativeLayout>
 
             <!--<RelativeLayout-->
             <!--android:id="@+id/rl_layout"-->
@@ -85,32 +95,36 @@
             <!--android:layout_alignParentStart="true"-->
             <!--android:layout_below="@+id/rl_relative_layout"-->
             <!--android:background="#ffc107">-->
-
-            <TextView
-                android:id="@+id/tv_food_name"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/iv_food_promotion"
-                android:layout_alignParentStart="true"
-                android:layout_below="@id/iv_food_promotion"
+                android:layout_below="@id/rl_relative_layout"
                 android:background="#ffc107"
-                android:padding="4dp"
-                android:paddingRight="10dp"
-                android:text="@string/text1"
-                android:textColor="#fff" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_seller"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/iv_food_promotion"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/tv_food_name"
-                android:background="#ffc107"
-                android:padding="4dp"
-                android:paddingRight="100dp"
-                android:text="Kent Ridge"
-                android:textColor="#fff" />
+                <TextView
+                    android:id="@+id/tv_food_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:padding="4dp"
+                    android:text="@string/text1"
+                    android:textColor="#fff"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_seller"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="8dp"
+                    android:paddingLeft="4dp"
+                    android:text="Kent Ridge"
+                    android:textColor="#fff"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
             <!--</RelativeLayout>-->
 
         </RelativeLayout>

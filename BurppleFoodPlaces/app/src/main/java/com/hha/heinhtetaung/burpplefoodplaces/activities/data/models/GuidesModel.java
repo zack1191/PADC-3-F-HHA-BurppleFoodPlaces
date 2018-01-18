@@ -1,6 +1,7 @@
 package com.hha.heinhtetaung.burpplefoodplaces.activities.data.models;
 
 import com.hha.heinhtetaung.burpplefoodplaces.activities.network.GuideOkHttpDataAgent;
+import com.hha.heinhtetaung.burpplefoodplaces.activities.network.GuideRetrofitDataAgent;
 import com.hha.heinhtetaung.burpplefoodplaces.activities.network.GuidesDataAgent;
 import com.hha.heinhtetaung.burpplefoodplaces.activities.network.PromotionDataAgent;
 
@@ -15,7 +16,8 @@ public class GuidesModel {
 
     private GuidesModel() {
 
-        mGuidesDataAgent = GuideOkHttpDataAgent.getsObjInstance();
+//        mGuidesDataAgent = GuideOkHttpDataAgent.getsObjInstance();
+        mGuidesDataAgent = GuideRetrofitDataAgent.getsObjInstance();
     }
 
     public static GuidesModel getsObjInstance() {

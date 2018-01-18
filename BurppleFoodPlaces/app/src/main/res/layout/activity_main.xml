@@ -252,7 +252,8 @@
                             android:id="@+id/tv_newly_opened"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="8dp"
                             android:layout_marginLeft="8dp"
                             android:padding="8dp"
                             android:text="Newly Opened"
@@ -260,11 +261,18 @@
                             android:textSize="16dp"
                             android:textStyle="bold" />
 
+                        <View
+                            android:id="@+id/v_for_newly_opened"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/tv_newly_opened"
+                            android:background="#bdbdbd" />
+
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/rv_newly_opened"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tv_newly_opened"
+                            android:layout_below="@id/v_for_newly_opened"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="8dp"></android.support.v7.widget.RecyclerView>
 
@@ -310,7 +318,8 @@
                             android:id="@+id/tv_trending_venues"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="16dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="8dp"
                             android:layout_marginLeft="8dp"
                             android:padding="8dp"
                             android:text="Trending Venues"
@@ -318,11 +327,19 @@
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
+                        <View
+                            android:id="@+id/v_for_trending_venes"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/tv_trending_venues"
+                            android:background="#bdbdbd" />
+
+
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/rv_trending_venues"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_below="@id/tv_trending_venues"
+                            android:layout_below="@id/v_for_trending_venes"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="8dp"></android.support.v7.widget.RecyclerView>
 
