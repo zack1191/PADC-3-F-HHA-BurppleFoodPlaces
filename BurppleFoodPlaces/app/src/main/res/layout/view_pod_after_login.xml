@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hha.heinhtetaung.burpplefoodplaces.activities.viewpods.AfterLoginUserViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+    <ImageView
+        android:id="@+id/iv_login_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_chicken_curry" />
+
+    <ImageView
+        android:id="@+id/iv_login_profile"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_above="@id/tv_login_username"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_dummy_user_picture"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_login_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_login_phoneno"
+        android:layout_marginLeft="@dimen/margin_medium_2"
+        android:text="Hein Htet Aung"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <TextView
+        android:id="@+id/tv_login_phoneno"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:text="+959450042454"
+        android:textColor="#fff"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/login_button"
+        android:text="Logout"
+        android:textColor="#fff" />
+
+</com.hha.heinhtetaung.burpplefoodplaces.activities.viewpods.AfterLoginUserViewPod>

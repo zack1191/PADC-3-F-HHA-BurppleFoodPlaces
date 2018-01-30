@@ -2,4 +2,5 @@
     <string name="app_name">Burpple Food Places</string>
     <string name="text1">Wildfire Chicken &amp; Burger</string>
     <string name="text2">New &amp; Trending</string>
+    <string name="search">Search e.g. Japanese in Orchard</string>
 </resources>

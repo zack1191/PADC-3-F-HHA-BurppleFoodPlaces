@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_chinese_food"
+        android:checked="true"
+        android:icon="@drawable/noodles"
+        android:title="Chinese Food" />
+
+    <item
+        android:id="@+id/menu_japanese_food"
+        android:icon="@drawable/sushi"
+        android:title="Japanese Food" />
+
+    <item
+        android:id="@+id/menu_thai_food"
+        android:icon="@drawable/soup"
+        android:title="Thai Food" />
+
+</menu>

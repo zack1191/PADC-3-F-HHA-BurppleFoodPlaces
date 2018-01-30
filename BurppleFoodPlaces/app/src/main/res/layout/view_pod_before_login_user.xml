@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hha.heinhtetaung.burpplefoodplaces.activities.viewpods.BeforeLoginUserViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+    <Button
+        android:id="@+id/btn_to_register"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/margin_medium_2"
+        android:background="@drawable/login_button"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/btn_to_login"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_to_register"
+        android:layout_alignEnd="@id/btn_to_register"
+        android:background="@drawable/login_button"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/img_chicken_curry" />
+
+</com.hha.heinhtetaung.burpplefoodplaces.activities.viewpods.BeforeLoginUserViewPod>

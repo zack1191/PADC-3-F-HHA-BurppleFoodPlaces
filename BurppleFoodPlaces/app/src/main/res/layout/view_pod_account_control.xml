@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hha.heinhtetaung.burpplefoodplaces.activities.viewpods.AccountControlViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="250dp">
+
+
+    <include
+        android:id="@+id/vp_after_login_user"
+        layout="@layout/view_pod_after_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/vp_before_login_user"
+        layout="@layout/view_pod_before_login_user"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</com.hha.heinhtetaung.burpplefoodplaces.activities.viewpods.AccountControlViewPod>
